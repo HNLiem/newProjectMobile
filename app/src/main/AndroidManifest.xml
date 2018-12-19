@@ -18,8 +18,8 @@
         </activity>
         <activity android:name=".signUp" />
         <activity
-            android:name=".home_customer"
-            android:label="@string/title_activity_home_customer"
+            android:name=".userhome"
+            android:label="@string/title_activity_userhome"
             android:theme="@style/AppTheme"></activity>
     </application>
 

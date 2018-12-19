@@ -1,24 +1,25 @@
 package com.example.hnl.myapplication;
 
 import android.content.Intent;
-import android.os.FileObserver;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.hnl.myapplication.item_class.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import info.hoang8f.widget.FButton;
+
 public class MainActivity extends AppCompatActivity {
     EditText edtPhone,edtPassword;
-    Button btnSignIn,btnSignUp;
+    FButton btnSignIn,btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
         edtPhone = (EditText) findViewById(R.id.edtPhone);
         edtPassword = (EditText) findViewById(R.id.edtPassword);
-        btnSignIn = (Button) findViewById(R.id.btnSignIn);
-        btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        btnSignIn = (FButton) findViewById(R.id.btnSignIn);
+        btnSignUp = (FButton) findViewById(R.id.btnSignUp);
 
+        //btnSignIn.setButtonColor(R.color.colorPrimary);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_User = database.getReference("User");
 
@@ -58,10 +60,8 @@ public class MainActivity extends AppCompatActivity {
                                 User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
                                 if (user.getPassword().equals(edtPassword.getText().toString())) {
                                     Toast.makeText(MainActivity.this, "Sign in Successfully!", Toast.LENGTH_LONG).show();
-                                    String name = user.getName();
-                                    Intent intent_home = new Intent(MainActivity.this,home_customer.class);
-                                    intent_home.putExtra("UserName",name);
-                                    startActivity(intent_home);
+                                    Intent intent = new Intent(MainActivity.this,userhome.class);
+                                    startActivity(intent);
                                 } else {
                                     Toast.makeText(MainActivity.this, "Sign in Failed!", Toast.LENGTH_LONG).show();
                                 }

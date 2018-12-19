@@ -1,4 +1,4 @@
-package com.example.hnl.myapplication;
+package com.example.hnl.myapplication.item_class;
 
 public class User {
     private String name;
