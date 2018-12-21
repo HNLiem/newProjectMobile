@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,7 +20,8 @@ import info.hoang8f.widget.FButton;
 
 public class MainActivity extends AppCompatActivity {
     EditText edtPhone,edtPassword;
-    FButton btnSignIn,btnSignUp;
+    Button btnSignIn,btnSignUp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         edtPhone = (EditText) findViewById(R.id.edtPhone);
         edtPassword = (EditText) findViewById(R.id.edtPassword);
-        btnSignIn = (FButton) findViewById(R.id.btnSignIn);
-        btnSignUp = (FButton) findViewById(R.id.btnSignUp);
+        btnSignIn = (Button) findViewById(R.id.btnSignIn);
+        btnSignUp = (Button) findViewById(R.id.btnSignUp);
+
 
         //btnSignIn.setButtonColor(R.color.colorPrimary);
         FirebaseDatabase database = FirebaseDatabase.getInstance();

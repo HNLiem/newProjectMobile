@@ -25,10 +25,10 @@
             android:layout_below="@+id/imgviewshoe1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txtView"
+            android:text="IT'S NEVER BEEN SO EASIER"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:fontFamily="@font/medium"
             android:textColor="#fff"
             android:layout_marginTop="20dp"
@@ -44,17 +44,25 @@
 
         <EditText
             android:id="@+id/edtPhone"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="60dp"
             android:hint="@string/edtPhone"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:fontFamily="@font/light"
+            android:drawableLeft="@drawable/phoneicon"
+            android:drawablePadding="20dp"
+            android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:hint="@string/edtPassword"
+            android:drawableLeft="@drawable/passicon"
+            android:fontFamily="@font/light"
+            android:drawablePadding="20dp"
+            android:layout_gravity="center"
             android:inputType="textPassword"/>
 
        <LinearLayout
@@ -68,7 +76,7 @@
                android:layout_weight="1"
                >
 
-               <info.hoang8f.widget.FButton
+               <Button
                    android:id="@+id/btnSignIn"
                    android:layout_width="120dp"
                    android:layout_height="50dp"
@@ -76,20 +84,25 @@
                    android:layout_centerVertical="true"
                    android:text="@string/btnSignIn"
                    android:textColor="#ffffff"
-                   app:buttonColor="@color/fbutton_color_alizarin" />
+                   android:textSize="16sp"
+                   android:background="#000"
+                    />
            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-                <info.hoang8f.widget.FButton
+                <Button
                     android:id="@+id/btnSignUp"
                     android:layout_width="120dp"
                     android:layout_height="50dp"
                     android:layout_centerInParent="true"
                     android:text="@string/btnSignUp"
                     android:textColor="#ffffff"
+                    android:fontFamily="@font/light"
+                    android:textSize="16sp"
+                    android:background="#000"
                    />
 
             </RelativeLayout>
