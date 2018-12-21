@@ -11,12 +11,27 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
+        android:background="#000000"
         >
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"/>
+            android:id="@+id/imgviewshoe"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shoebg"
+            />
+        <TextView
+            android:id="@+id/txtview"
+            android:layout_below="@+id/imgviewshoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:text="@string/txtView"
+            android:fontFamily="@font/medium"
+            android:layout_marginTop="20dp"/>
 
     </RelativeLayout>
 
@@ -29,28 +44,39 @@
 
         <EditText
             android:id="@+id/edtPhone"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="360dp"
             android:layout_height="60dp"
-            android:background="@color/colorPrimary"
             android:hint="@string/edtPhone"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:fontFamily="@font/light"
+            android:drawableLeft="@drawable/phoneicon"
+            android:drawablePadding="20dp"/>
 
         <EditText
             android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="360dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"
             android:hint="@string/edtPassword"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:fontFamily="@font/light"
+            android:drawableLeft="@drawable/passicon"
+            android:drawablePadding="20dp"
+        />
 
         <EditText
             android:id="@+id/edtName"
+            android:layout_gravity="center"
             android:hint="@string/edtName"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"/>
+            android:fontFamily="@font/light"
+            android:drawableLeft="@drawable/user1"
+            android:drawablePadding="20dp"
+        />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -68,8 +94,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="120dp"
-                    android:text="@string/rdbSeller" />
+                    android:layout_marginLeft="100dp"
+                    android:text="@string/rdbSeller"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/light"/>
 
                 <RadioButton
                     android:id="@+id/rdbCustomer"
@@ -77,28 +105,38 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/rdbCustomer"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/light"
                     android:layout_marginLeft="60dp"/>
             </RadioGroup>
 
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="70dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/btnRegister" />
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/btnRegister"
+                android:textColor="#fff"
+                android:fontFamily="@font/light"
+                android:textSize="16dp"
+                android:background="#000"/>
 
             <Button
                 android:id="@+id/btnCancel"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="70dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/btnCancel" />
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/btnCancel"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:background="#000"
+                android:fontFamily="@font/light"/>
 
         </RelativeLayout>
 

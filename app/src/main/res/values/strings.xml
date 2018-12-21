@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="edtPhone">Your Number</string>
-    <string name="edtPassword">Your Account Password</string>
-    <string name="edtName">Your Name</string>
+    <string name="edtPhone">Phone Number</string>
+    <string name="txtView">IT'S NEVER BEEN SO EASIER</string>
+    <string name="edtPassword">Password</string>
+    <string name="edtName">Name</string>
     <string name="btnCancel">Cancel</string>
     <string name="btnRegister">Register</string>
     <string name="btnSignIn">Sign In</string>
