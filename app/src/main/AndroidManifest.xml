@@ -20,7 +20,9 @@
         <activity
             android:name=".userhome"
             android:label="@string/title_activity_userhome"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ShoeList" />
+        <activity android:name=".shoes_list"></activity>
     </application>
 
 </manifest>
