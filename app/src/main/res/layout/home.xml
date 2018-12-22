@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical">
+        <RelativeLayout
+            android:id="@+id/ReLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtNameShoe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Name Of Shoe"
+        android:textSize="24sp"
+        android:fontFamily="@font/light"
+        />
+    <TextView
+        android:layout_below="@+id/txtNameShoe"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Name of Trademark"
+        android:fontFamily="@font/light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Price"
+        android:textSize="24sp"
+        android:fontFamily="@font/light"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpImage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="120dp">
+    </android.support.v4.view.ViewPager>
+           <LinearLayout
+               android:layout_below="@+id/vpImage"
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:layout_marginTop="10dp"
+               android:orientation="horizontal"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Free shipping See details at : transport fee"
+                   android:fontFamily="@font/light"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginStart="30dp"
+                   android:textSize="18sp"
+                   />
+           </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
