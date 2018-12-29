@@ -64,7 +64,9 @@ public class shoes_list extends AppCompatActivity {
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(shoes_list.this,""+local.getName(),Toast.LENGTH_LONG).show();
+                        Intent shoeDetail=new Intent(shoes_list.this,ShoeDetail.class);
+                        shoeDetail.putExtra("ShoeId",adapter.getRef(position).getKey());
+                        startActivity(shoeDetail);
                     }
                 });
             }

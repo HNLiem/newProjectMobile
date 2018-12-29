@@ -11,26 +11,26 @@
             android:id="@+id/ReLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/txtNameShoe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:text="Name Of Shoe"
-        android:textSize="24sp"
-        android:fontFamily="@font/light"
-        />
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_below="@+id/txtNameShoe"
-        android:layout_marginStart="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="Name of Trademark"
-        android:fontFamily="@font/light"/>
+            <TextView
+                android:id="@+id/txtNameShoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Name Of Shoe"
+                android:textSize="24sp"
+                android:fontFamily="@font/light"
+                />
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_below="@+id/txtNameShoe"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Name of Trademark"
+                android:fontFamily="@font/light"/>
             <TextView
                 android:id="@+id/txtdescription"
                 android:layout_below="@+id/simage"
@@ -41,17 +41,17 @@
                 android:text="description"
                 android:fontFamily="@font/light"/>
 
-    <TextView
-        android:id="@+id/txtprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Price"
-        android:textSize="24sp"
-        android:fontFamily="@font/light"
-        />
+            <TextView
+                android:id="@+id/txtprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Price"
+                android:textSize="24sp"
+                android:fontFamily="@font/light"
+                />
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/simage"
@@ -60,34 +60,34 @@
                 android:layout_marginTop="120dp"
                 ></android.support.v4.view.ViewPager>
 
-           <LinearLayout
+            <LinearLayout
 
-               android:id="@+id/ship"
-               android:layout_below="@+id/simage"
-               android:layout_width="match_parent"
-               android:layout_height="150dp"
-               android:layout_marginTop="10dp"
-               android:orientation="horizontal"
-               >
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Free shipping See details at : Transport fee"
-                   android:drawableLeft="@drawable/car"
-                   android:drawablePadding="5dp"
-                   android:fontFamily="@font/light"
-                   android:layout_marginTop="10dp"
-                   android:layout_marginStart="30dp"
-                   android:textSize="18sp"
-                   />
+                android:id="@+id/ship"
+                android:layout_below="@+id/simage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Free shipping See details at : Transport fee"
+                    android:drawableLeft="@drawable/car"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/light"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:textSize="18sp"
+                    />
 
-           </>
+            </>
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
                 android:layout_below="@+id/ship"
                 android:layout_marginTop="10dp"
-               >
+                >
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -98,15 +98,15 @@
                     android:fontFamily="@font/light"
                     android:textSize="18sp"
                     android:padding="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:text="Trademark"
-                android:fontFamily="@font/light"
-                android:textSize="18sp"
-                android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="Trademark"
+                    android:fontFamily="@font/light"
+                    android:textSize="18sp"
+                    android:padding="10dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
