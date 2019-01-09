@@ -24,7 +24,7 @@
         <activity android:name=".ShoeList" />
         <activity android:name=".shoes_list" />
         <activity android:name=".shoesDetail" />
-        <activity android:name=".ShoeDetail"></activity>
+        <activity android:name=".Shoe_Detail"></activity>
     </application>
 
 </manifest>

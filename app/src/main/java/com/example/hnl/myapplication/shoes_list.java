@@ -64,7 +64,7 @@ public class shoes_list extends AppCompatActivity {
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Intent shoeDetail=new Intent(shoes_list.this,ShoeDetail.class);
+                        Intent shoeDetail=new Intent(shoes_list.this,Shoe_Detail.class);
                         shoeDetail.putExtra("ShoeId",adapter.getRef(position).getKey());
                         startActivity(shoeDetail);
                     }
