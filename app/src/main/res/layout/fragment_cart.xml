@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.CartFragment">
+    tools:context=".fragment.CartFragment"
+    android:weightSum="4"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ListCart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_weight="1"
+        android:background="#000"
+        android:scrollbars="vertical">
 
-</FrameLayout>
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/txttotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Total: "
+            android:textSize="20sp"
+            android:fontFamily="@font/medium"
+            android:textColor="#000"
+            android:layout_marginStart="40dp"/>
+        <TextView
+            android:id="@+id/txtToTalMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txttotal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="@font/medium"
+            android:text="10000 USD"/>
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:background="#000"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="72dp"
+            android:text="Order Now"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+</LinearLayout>

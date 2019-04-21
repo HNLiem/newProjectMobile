@@ -3,26 +3,23 @@ package com.example.hnl.myapplication.item_class;
 public class User {
     private String name;
     private String Password;
-    private Byte typeUser;
+    private String Phone;
+    private String type;
 
-    public Byte getTypeUser() {
-        return typeUser;
-    }
-
-    public void setTypeUser(Byte typeUser) {
-        this.typeUser = typeUser;
-    }
-
-    public User(String name, String password, Byte typeUser) {
+    public User(String name, String password, String phone, String type) {
         this.name = name;
         Password = password;
-        this.typeUser = typeUser;
+        Phone = phone;
+        this.type = type;
+    }
+    public User() { }
 
+    public String getType() {
+        return type;
     }
 
-    public User()
-    {
-
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getName() {
@@ -40,4 +37,13 @@ public class User {
     public void setPassword(String password) {
         Password = password;
     }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
+
 }

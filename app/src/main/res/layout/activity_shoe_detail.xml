@@ -199,11 +199,12 @@
         android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="30dp"
         android:clickable="true"
-        app:srcCompat="@drawable/car"
-        app:fabCustomSize="60dp"
+        app:srcCompat="@drawable/car1"
+        app:backgroundTint="#000"
+        app:fabCustomSize="80dp"
         />
 
 </RelativeLayout>

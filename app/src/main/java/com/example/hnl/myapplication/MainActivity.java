@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.hnl.myapplication.Common.Common;
 import com.example.hnl.myapplication.item_class.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
                                 User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
                                 if (user.getPassword().equals(edtPassword.getText().toString())) {
                                     Toast.makeText(MainActivity.this, "Sign in Successfully!", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(MainActivity.this,userhome.class);
+                                    Common.currentUser = user;
+                                    Intent intent = new Intent(MainActivity.this,main_category.class);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(MainActivity.this, "Sign in Failed!", Toast.LENGTH_LONG).show();

@@ -23,7 +23,7 @@ public class signUp extends AppCompatActivity {
     Button btnRegister,btnCancel;
     RadioGroup radioGroup;
     RadioButton rdbSeller,rdbCustomer;
-    Byte type;
+    String type = "Customer";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,73 +49,49 @@ public class signUp extends AppCompatActivity {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_User = database.getReference("User");
 
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 table_User.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.child(edtPhone.getText().toString()).exists())
-                        {
-                            Toast.makeText(signUp.this,"Số điện thoại đã tồn tại",Toast.LENGTH_LONG).show();
-                        }
-                        else
-                        {
-                            if(edtPhone.getText().toString().length() < 10 || edtPhone.getText().toString().length() > 11)
-                            {
-                                Toast.makeText(signUp.this,"Số điện thoại không hợp lê",Toast.LENGTH_LONG).show();
+                        User uss = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
 
-                            }
-                            if(edtName.getText().toString().length() < 4)
+                            if(table_User.orderByChild(edtPhone.getText().toString()).equals(uss))
                             {
-                                Toast.makeText(signUp.this,"Tên đăng nhập không hợp lệ",Toast.LENGTH_LONG).show();
-
+                                Toast.makeText(signUp.this,"Số điện thoại đã tồn tại",Toast.LENGTH_LONG).show();
                             }
                             else
                             {
-                                if(edtPassword.getText().toString().length() <4)
+                                if(edtPhone.getText().toString().length() < 10 || edtPhone.getText().toString().length() > 11)
                                 {
-                                    Toast.makeText(signUp.this,"Mật khẩu không hợp lệ",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(signUp.this,"Số điện thoại không hợp lê",Toast.LENGTH_LONG).show();
+
+                                }
+                                if(edtName.getText().toString().length() < 4)
+                                {
+                                    Toast.makeText(signUp.this,"Tên đăng nhập không hợp lệ",Toast.LENGTH_LONG).show();
 
                                 }
                                 else
                                 {
-
-                                    if(rdbCustomer.isChecked()==false && rdbSeller.isChecked()==false)
+                                    if(edtPassword.getText().toString().length() <4)
                                     {
-                                        Toast.makeText(signUp.this,"Vui lòng nhập đầy đủ thông tin",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(signUp.this,"Mật khẩu không hợp lệ",Toast.LENGTH_LONG).show();
+
                                     }
                                     else
                                     {
-                                        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                                            @Override
-                                            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                                                switch (checkedId)
-                                                {
-                                                    case R.id.rdbCustomer:
-                                                        type=1;
-                                                        break;
-                                                    case R.id.rdbSeller:
-                                                        type=2;
-                                                        break;
-                                                }
-                                            }
-                                        });
-                                        User user=new User(edtName.getText().toString(),edtPassword.getText().toString(),type);
+                                        User user=new User(edtName.getText().toString(),edtPassword.getText().toString(),edtPhone.getText().toString(),type);
                                         table_User.child(edtPhone.getText().toString()).setValue(user);
-                                        Toast.makeText(signUp.this,"Đăng ký thành công",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(signUp.this,"Đăng ký thành công",Toast.LENGTH_SHORT).show();
                                         finish();
                                     }
-
-
-
                                 }
+
                             }
-
-                        }
-
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 

@@ -1,15 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.UserFragment"
-    android:background="#e234">
+    android:background="#fff">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/infor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Information"
+        android:textColor="#000"
+        android:fontFamily="@font/medium"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:text="Edit"
+        android:textColor="#fff"
+        android:fontFamily="@font/medium"
+        android:layout_below="@+id/infor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infor"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/ten1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        android:textSize="20sp"
+        android:fontFamily="@font/medium"
+        android:textColor="#000"
+        android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+        />
+        <TextView
 
-</FrameLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone :"
+            android:textSize="20sp"
+            android:fontFamily="@font/medium"
+            android:textColor="#000"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type :"
+            android:textSize="20sp"
+            android:fontFamily="@font/medium"
+            android:textColor="#000"
+            android:layout_marginStart="40dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infor"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="90dp"
+        >
+        <TextView
+            android:id="@+id/ten2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of user"
+            android:textSize="20sp"
+            android:fontFamily="@font/light"
+            android:textColor="#000"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone of user "
+            android:textSize="20sp"
+            android:fontFamily="@font/light"
+            android:textColor="#000"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/phone"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type of user"
+            android:textSize="20sp"
+            android:fontFamily="@font/light"
+            android:textColor="#000"
+            android:layout_marginStart="40dp"
+            android:id="@+id/type"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

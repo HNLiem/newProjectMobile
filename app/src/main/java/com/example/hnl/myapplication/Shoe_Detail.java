@@ -11,9 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
+import com.example.hnl.myapplication.Database.Database;
 import com.example.hnl.myapplication.fragment.CartFragment;
 
+import com.example.hnl.myapplication.item_class.Order;
 import com.example.hnl.myapplication.item_class.Shoe;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,7 +31,6 @@ public class Shoe_Detail extends AppCompatActivity {
     String shoeId="";
     FloatingActionButton addCart;
     Shoe Shoes;
-    FloatingActionButton getAddCart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,13 +43,27 @@ public class Shoe_Detail extends AppCompatActivity {
         shoeprice = (TextView) findViewById(R.id.txtprice);
         shoeimage = (ImageView) findViewById(R.id.vpImage);
         addCart = (FloatingActionButton) findViewById(R.id.fbaddToCart);
-        getAddCart = (FloatingActionButton) findViewById(R.id.fbaddToCart);
+
         if (getIntent() != null) {
             shoeId = getIntent().getStringExtra("ShoeId");
         }
         if (!shoeId.isEmpty() && shoeId != null) {
             getDetailShoe(shoeId);
         }
+
+        addCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Database(getBaseContext()).addToCart(new Order(
+                        shoeId,
+                        Shoes.getName(),
+                        Shoes.getPrice(),
+                        Shoes.getDiscount()
+                ));
+
+                Toast.makeText(Shoe_Detail.this," Added to your Cart ",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void getDetailShoe(String shoeId) {

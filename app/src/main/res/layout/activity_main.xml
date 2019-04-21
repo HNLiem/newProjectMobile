@@ -51,7 +51,7 @@
             android:fontFamily="@font/light"
             android:drawableLeft="@drawable/phoneicon"
             android:drawablePadding="20dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <EditText
             android:id="@+id/edtPassword"
@@ -63,7 +63,7 @@
             android:fontFamily="@font/light"
             android:drawablePadding="20dp"
             android:layout_gravity="center"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -84,6 +84,7 @@
                    android:layout_centerVertical="true"
                    android:text="@string/btnSignIn"
                    android:textColor="#ffffff"
+                   android:fontFamily="@font/medium"
                    android:textSize="16sp"
                    android:background="#000"
                     />
@@ -100,7 +101,7 @@
                     android:layout_centerInParent="true"
                     android:text="@string/btnSignUp"
                     android:textColor="#ffffff"
-                    android:fontFamily="@font/light"
+                    android:fontFamily="@font/medium"
                     android:textSize="16sp"
                     android:background="#000"
                    />

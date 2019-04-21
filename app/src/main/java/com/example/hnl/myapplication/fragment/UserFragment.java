@@ -46,6 +46,8 @@ import com.squareup.picasso.Picasso;
 public class UserFragment extends Fragment {
 
 
+    TextView name,phone,type;
+
     public UserFragment() {
         // Required empty public constructor
     }
@@ -54,7 +56,14 @@ public class UserFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View viewRoot =  inflater.inflate(R.layout.fragment_user, container, false);
+        name=(TextView)viewRoot.findViewById(R.id.ten2);
+        phone=(TextView)viewRoot.findViewById(R.id.phone);
+        type=(TextView)viewRoot.findViewById(R.id.type);
+        name.setText(Common.currentUser.getName());
+        phone.setText(Common.currentUser.getPhone());
+        type.setText(Common.currentUser.getType());
         return viewRoot;
 
     }
